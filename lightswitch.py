@@ -6,7 +6,7 @@ button = tk.Button(pady = 10, padx = 20, text='Switch light off', bg="white", fg
 button.pack(pady = 50, padx = 100)
 
 # schijf hier tussen je code
-file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","a")
+file = open("action.log","a")
 
 COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
           'linen', 'antique white', 'papaya whip', 'blanched almond', 'bisque', 'peach puff',
