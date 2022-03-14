@@ -8,15 +8,13 @@ button = tk.Button(pady = 10, padx = 20, text='Switch light off', bg="white", fg
 button.pack(pady = 50, padx = 100)
 
 # schijf hier tussen je code
-fileExist = os.path.exists("action.log")
-print(fileExist)
-# file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log")
-# if fileExist:
-file = open("action.log","w")
-file.write("\nLogboek lightswitch")
-# else:
-#     file = open("action.log","x")
-#     file.write("\nLogboek lightswitch")
+
+if os.path.exists("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log"):
+    file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","w")
+    file.write("Logboek lightswitch\n")
+else:
+    file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","x")
+    file.write("Logboek lightswitch\n")
 
 COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
           'linen', 'antique white', 'papaya whip', 'blanched almond', 'bisque', 'peach puff',
