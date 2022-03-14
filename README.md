@@ -18,14 +18,12 @@ button.bind('<Button>', buttonPress)
 ```
 ## F1.09.02.O4 - Dynamic Logfile
 Nu kan hij checken of het bestand al bestaat met os.path.exists(). Hij geeft uiteindelijk een True of False aan, als het True is dan bestaat het al, anders niet.
-met "file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","w")" opent hij het bestand en kan je erin (her)schrijven
-met "file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","x")" maakt hij het bestand 
+Met "file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","w")" opent hij het bestand en kan je erin (her)schrijven
+Met "file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","x")" maakt hij het bestand aan
 ``` python
 import os.path
 
-fileExist = os.path.exists("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log")
-print(fileExist)
-if fileExist == True:
+if os.path.exists("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log"):
     file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","w")
     file.write("Logboek lightswitch\n")
 else:
