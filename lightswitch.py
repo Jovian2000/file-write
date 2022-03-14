@@ -1,12 +1,22 @@
 import tkinter as tk
 import random
+import os.path
+
 window = tk.Tk()
 window.config(bg="black")
 button = tk.Button(pady = 10, padx = 20, text='Switch light off', bg="white", fg="black")
 button.pack(pady = 50, padx = 100)
 
 # schijf hier tussen je code
-file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","a")
+fileExist = os.path.exists("action.log")
+print(fileExist)
+# file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log")
+# if fileExist:
+file = open("action.log","w")
+file.write("\nLogboek lightswitch")
+# else:
+#     file = open("action.log","x")
+#     file.write("\nLogboek lightswitch")
 
 COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
           'linen', 'antique white', 'papaya whip', 'blanched almond', 'bisque', 'peach puff',
@@ -85,6 +95,7 @@ COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'ol
           'gray84', 'gray85', 'gray86', 'gray87', 'gray88', 'gray89', 'gray90', 'gray91', 'gray92',
           'gray93', 'gray94', 'gray95', 'gray97', 'gray98', 'gray99']
 
+
 def buttonPress(event):
     if button.config('text')[-1] == 'Switch light on':
         button.config(text='Switch light off',bg="white",fg="black")
@@ -97,6 +108,7 @@ def buttonPress(event):
         window.config(bg=randomColor)      
         print("\nlight is on \nColor: " + randomColor)
         file.write("\nlight is on \nColor: " + randomColor)
+
 button.bind('<Button>', buttonPress)
 
 # schijf hier tussen je code

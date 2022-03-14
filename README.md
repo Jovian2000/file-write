@@ -16,3 +16,19 @@ def buttonPress(event):
         file.write("\nlight is on \nColor: " + randomColor)
 button.bind('<Button>', buttonPress)
 ```
+## F1.09.02.O4 - Dynamic Logfile
+Nu kan hij checken of het bestand al bestaat met os.path.exists(). Hij geeft uiteindelijk een True of False aan, als het True is dan bestaat het al, anders niet.
+met "file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","w")" opent hij het bestand en kan je erin (her)schrijven
+met "file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","x")" maakt hij het bestand 
+``` python
+import os.path
+
+fileExist = os.path.exists("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log")
+print(fileExist)
+if fileExist == True:
+    file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","w")
+    file.write("Logboek lightswitch\n")
+else:
+    file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","x")
+    file.write("Logboek lightswitch\n")
+```
