@@ -9,11 +9,11 @@ button.pack(pady = 50, padx = 100)
 
 # schijf hier tussen je code
 
-if os.path.exists("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log"):
-    file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","w")
+if os.path.exists("C:/ICT/file-write/action.log"):
+    file = open("C:/ICT/file-write/action.log","w")
     file.write("Logboek lightswitch\n")
 else:
-    file = open("C:/Users/Gebruiker/OneDrive/Bureaublad/ICT/file-write/action.log","x")
+    file = open("C:/ICT/file-write/action.log","x")
     file.write("Logboek lightswitch\n")
 
 COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
